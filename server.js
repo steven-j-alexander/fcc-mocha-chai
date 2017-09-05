@@ -67,7 +67,7 @@ app.route('/travellers')
 
 var error;
 app.get('/_api/get-tests', cors(), function(req, res, next){
-  if(error || process.env.SKIP_TESTS) 
+  if(error || process.env.SKIP_TESTS)
     return res.json({status: 'unavailable'});
   next();
 },
